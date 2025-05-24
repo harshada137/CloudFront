@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Form</title>
+    <style>
+        body {
+            background-color: #fdf6f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff7fa;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #e0cfcf;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #ffcad4;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ffc2d1;
+        }
+
+        label {
+            font-weight: bold;
+            color: #7d6e83;
+        }
+    </style>
+</head>
+<body>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="anyfile">Select image to upload:</label>
+        <input type="file" name="anyfile" id="anyfile">
+
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+</body>
+</html>
